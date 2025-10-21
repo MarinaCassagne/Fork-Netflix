@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netflop>
-  <films xml:id="film">
+  <films xml:id="films">
     <film xml:id="1">
       <url>Pictures/f1.jpg</url>
       <nom>Split</nom>
@@ -61,7 +61,7 @@
       </resumer>
     </film>
   </films>
-  <series xml:id="serie">
+  <series xml:id="series">
     <serie xml:id="1">
       <url>Pictures/f1.jpg</url>
       <nom>Walking Dead</nom>
@@ -141,7 +141,7 @@
       </resumer>
     </serie>
   </series>
-  <documentaires xml:id="documentaire">
+  <documentaires xml:id="documentaires">
     <documentaire xml:id="1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
@@ -192,7 +192,7 @@
       </resumer>
     </documentaire>
   </documentaires>
-  <mangas xml:id="manga">
+  <mangas xml:id="mangas">
     <manga xml:id ="1">
       <url>Pictures/f1.jpg</url>
       <nom>Ghost in the Shell</nom>
@@ -293,7 +293,7 @@
       </resumer>
     </anime>
   </animes>
-  <shows xml:id="animes">
+  <shows xml:id="shows">
     <show xml:id="1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
@@ -345,7 +345,7 @@
       </resumer>
     </show>
   </shows>
-  <concerts xml:id="animes">
+  <concerts xml:id="concerts">
     <concert xml:id="1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
