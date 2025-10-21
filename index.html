@@ -30,7 +30,7 @@ Html
         <!-- <img id="LogoNetflixPetit"src="/img/LogoNetflix.png" alt="Logo Netflix"> -->
         <nav>
             <ul>
-                <li><a href="">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="">Séries</a></li>
                 <li><a href="">Films</a></li>
                 <li><a href="">Jeux</a></li>
@@ -42,7 +42,7 @@ Html
 <header>
     <h1>Bienvenue sur <img id="LogoNetflixGrand" src="img/LogoNetflixGrand.png" alt="Logo Netflix"></h1>
 
-    <section id="SectionOffres">
+    <section id="sectionOffres">
         <h2>Nos offres</h2>
         <div>
             <article>
@@ -82,20 +82,22 @@ Html
 </header>
 
 <main>
-    <section class="row">
+    <section id="films">
         <h2>Films</h2>
         <div>
             <article>
-                <h3>Les Animaux Fantastiques <br>Les Secrets de Dumbledore </h3>
-                <img src="/imgFilm/LesAnimauxFantastiquesLesSecretsdeDumbledore.jpg" alt="Les Animaux Fantastiques : Les Secrets de Dumbledore">
-                <ul>
-                    <li>Film</li>
-                    <li>Fantastique</li>
-                    <li>2022</li>
-                    <li>2h22</li>
-                    <li>10+</li>
-                </ul>
-                <p>Quand Grindelwald menace de détruire tous les Moldus, le professeur Dumbledore recrute Norbert Dragonneau pour diriger une équipe de sorciers et de sorcières afin de le neutraliser.</p>
+                <a href="Arcane.html">
+                    <h3>Les Animaux Fantastiques <br>Les Secrets de Dumbledore </h3>
+                    <img src="/imgFilm/LesAnimauxFantastiquesLesSecretsdeDumbledore.jpg" alt="Les Animaux Fantastiques : Les Secrets de Dumbledore">
+                    <ul>
+                        <li>Film</li>
+                        <li>Fantastique</li>
+                        <li>2022</li>
+                        <li>2h22</li>
+                        <li>10+</li>
+                    </ul>
+                    <p>Quand Grindelwald menace de détruire tous les Moldus, le professeur Dumbledore recrute Norbert Dragonneau pour diriger une équipe de sorciers et de sorcières afin de le neutraliser.</p>
+                </a>
             </article>
 
             <article>
@@ -139,8 +141,8 @@ Html
         </div>
     </section>
 
-    <section class="'row">
-        <h2>Séries</h2>
+    <section id="series">
+        <h2>Sries</h2>
         <div>
             <article>
                 <h3>La Casa de Papel</h3>
@@ -160,7 +162,7 @@ Html
                 <img src="/imgSeries/StrangerThings.jpg" alt="Stranger Things">
                 <ul>
                     <li>Série</li>
-                    <li>Science-fiction, Horreur</li>
+                    <li>Science-fiction</li>
                     <li>2016</li>
                     <li>34 épisodes</li>
                     <li>13+</li>
@@ -182,21 +184,23 @@ Html
             </article>
 
             <article>
-                <h3>Arcane <br> League of Legends</h3>
-                <img src="/imgSeries/ArcaneLeagueofLegends.jpg" alt="Arcane: League of Legends">
-                <ul>
-                    <li>Série</li>
-                    <li>Animation</li>
-                    <li>2021</li>
-                    <li>9 épisodes</li>
-                    <li>14+</li>
-                </ul>
-                <p>Dans le monde de Piltover et Zaun, deux sœurs se retrouvent ennemies dans une guerre déchirante alimentée par la magie et la technologie. Une origine épique des héros de League of Legends.</p>
+                <a href="Arcane.html"></a>
+                    <h3>Arcane <br> League of Legends</h3>
+                    <img src="/imgSeries/ArcaneLeagueofLegends.jpg" alt="Arcane: League of Legends">
+                    <ul>
+                        <li>Série</li>
+                        <li>Animation</li>
+                        <li>2021</li>
+                        <li>9 épisodes</li>
+                        <li>14+</li>
+                    </ul>
+                    <p>Dans le monde de Piltover et Zaun, deux sœurs se retrouvent ennemies dans une guerre déchirante alimentée par la magie et la technologie. Une origine épique des héros de League of Legends.</p>
+                </a>
             </article>
         </div>
     </section>
 
-    <section class="row">
+    <section id="documentaire">
         <h2>Documentaires</h2>
         <div>
             
@@ -254,7 +258,7 @@ Html
         </div>
     </section>
 
-    <section class="row">
+    <section id="manga">
         <h2>Manga <br> The Art of Anime</h2>
         <div>
             
@@ -314,5 +318,7 @@ Html
 
 </main>
 
+<script src="script.js"></script>
 </body>
+
 </html>
