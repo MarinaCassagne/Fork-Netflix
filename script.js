@@ -48,7 +48,7 @@ function chargerNetflopXml() {
     xhr.send();
 }
 
-console.log(chargerNetflopXml());
+
 
 /**
  * Fonction pour afficher les films depuis le document XML
@@ -72,5 +72,121 @@ console.log(chargerNetflopXml());
     //Parcourir tous les films ( attention films est un HTMLCollection, du coup pas un vrai tableau!)
     for (let i = 0; i < films.length;i++) {
         console.log(films[i]);
+        let filmCard = creerCarteXML(films[i]);
+        container.appendChild(filmCard);
     }
  }
+
+//========================================================================================================
+
+ /**
+  * Fonction générique pour créer une carte d'affichage à partir d'un élément XML
+  * @param {element} item - element XML (film, serie, etc)
+  @returns {HTMLElement} element div representant la carte
+  */
+
+ function creerCarteXML(item){
+    // creer le conteneur de la carte
+    // creer une div pour la carte
+    let card = document.createElement("div");
+    card.className = "card"; // = card.setAttribute(className,"card");
+
+    // extraire du XML
+
+    // récupérer le nom depuis la balise <nom>
+    let nom = item.getElementsByTagName("nom")[0].textContent;
+
+    // récupérer le genre depuis la balise <genre>
+    let genre= item.getElementsByTagName("genre")[0].textContent;
+
+    // récupérer le réalisateur depuis la balise <realisateur>
+    let realisateur = item.getElementsByTagName("realisateur")[0].textContent;
+
+    // récupérer la date de sortie depuis la balise <dateSortie>
+    let dateSortie = item.getElementsByTagName("dateSortie")[0].textContext;
+
+    // récuperer le resumé depuis la balise <resumer>
+    //trim( )- supprimer les espaces au début et à la fin
+    let resumer = item.getElementsByTagName("resumer")[0].textContent.trim()
+
+    // recuperer l'url de l'image depuis la balise <url>
+    let url = item.getElementsByTagName("url")[0].textContent;
+
+    // créer un element img pour afficher l'image
+    let img = document.createElement("img");
+    // définir la source de l' image
+    img.src = url;
+    img.alt = nom;
+    img.className = "card-image";
+
+    // créer le conteneur pour les informations
+    // créer un div pour contenir toutes les infos textuelles
+    let infoDiv = document.createElement("div");
+    infoDiv.className = "card-info";
+
+    // créer le titre
+    // créer un element H3 pour le titre 
+    let titreElement = document.createElement ("h3");
+    titreElement.textContent = nom;
+
+    // créer l'element genre
+    // creer un paragraphe pour le genre
+    let genreElement = document.createElement("p");
+    //innerHTML permet d'insérer du html
+    genreElement.innerHTML = "<strong>Genre:</strong>" + genre;
+    // créer l'element realisateur
+    // créer un paragraphe pour le realisateur
+    let realisateurElement = document.createElement("p");
+    realisateurElement.innerHTML = "<strong>Réalisateur:</strong>" + realisateur;
+
+    // créer l'element date de sortie
+    // créer un paragraphe date de sortie
+    let dateElement = document.createElement("p")
+    dateElement.innerHTML = "<strong>Date de sortie:</strong>" + dateSortie;
+
+    // créer le conteneur du résumé
+    // créer un div pour contenir le résumé et le bouton
+    let resumerContainer = document.createElement("div");
+    resumerContainer.className = "resume-container";
+
+    // créer l'element résumé
+    // créer le paragraphe pour le résumé
+    let resumerElement = document.createElement("p");
+    resumerElement.className = "resume";
+    resumerElement.innerHTML = "<strong>Résumé:</strong>" + resumer;
+
+    // ajouter le resumé au conteneur
+    resumerContainer.appendChild(resumerElement);
+
+    // vérifier si le résumé dépasse 4 lignes la fonction bonus ()
+    // utiliser le set Timeout pour laisser le DOM se mettre à jour
+    // permettre aussi de mesurer la hauteur réelle
+
+    // assembler tous les element
+    // ajouter tous les elements au conteneur d'information
+    infoDiv.appendChild(titreElement);
+    infoDiv.appendChild(genreElement);
+    infoDiv.appendChild(realisateurElement);
+    infoDiv.appendChild(dateElement);
+    infoDiv.appendChild(resumerContainer);
+
+
+    // ajoute l'image et les informations à la carte
+    card.appendChild(img);
+    card.appendChild(infoDiv);
+    
+    return card;
+
+ } 
+
+/**Charger les données lorsque le DOM est complétement chargé
+*DOMContentLoaded = évenement declenché lorsque le html est pret
+*/
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Le DOM est chargé,lancement de netflop avec DOMParser...");
+
+    //executer la function chargerNetflopXML
+    chargerNetflopXml();
+})
+
+console.log(chargerNetflopXml);
