@@ -33,10 +33,6 @@ function chargerNetflopXml() {
             afficherShowsXML(xmlDoc);
             afficherConcertsXML(xmlDoc);
             
-
-
-
-
             console.log(xmlDoc);
     
         }else{
@@ -302,16 +298,16 @@ function chargerNetflopXml() {
     // creer un paragraphe pour le genre
     let genreElement = document.createElement("p");
     //innerHTML permet d'insérer du html
-    genreElement.innerHTML = "<strong>Genre:</strong>" + genre;
+    genreElement.innerHTML = "<strong>Genre : </strong>" + genre;
     // créer l'element realisateur
     // créer un paragraphe pour le realisateur
     let realisateurElement = document.createElement("p");
-    realisateurElement.innerHTML = "<strong>Réalisateur:</strong>" + realisateur;
+    realisateurElement.innerHTML = "<strong>Réalisateur : </strong>" + realisateur;
 
     // créer l'element date de sortie
     // créer un paragraphe date de sortie
     let dateElement = document.createElement("p")
-    dateElement.innerHTML = "<strong>Date de sortie:</strong>" + dateSortie;
+    dateElement.innerHTML = "<strong>Date de sortie : </strong>" + dateSortie;
 
     // créer le conteneur du résumé
     // créer un div pour contenir le résumé et le bouton
@@ -322,7 +318,7 @@ function chargerNetflopXml() {
     // créer le paragraphe pour le résumé
     let resumerElement = document.createElement("p");
     resumerElement.className = "resume";
-    resumerElement.innerHTML = "<strong>Résumé:</strong>" + resumer;
+    resumerElement.innerHTML = "<strong>Résumé : </strong>" + resumer;
 
     // ajouter le resumé au conteneur
     resumerContainer.appendChild(resumerElement);
