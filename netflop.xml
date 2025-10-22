@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netflop>
-  <films xml:id="films">
-    <film xml:id="1">
+  <films>
+    <film id="film_1">
       <url>Pictures/f1.jpg</url>
       <nom>Split</nom>
       <genre>Thriller</genre>
@@ -18,7 +18,7 @@
         alors que les divisions qui régnaient jusqu’alors dans son subconscient volent en éclats.
       </resumer>
     </film>
-    <film xml:id="2">
+    <film id="film_2">
       <url>Pictures/f2.jpg</url>
       <nom>Shutter Island</nom>
       <genre>Thriller</genre>
@@ -33,7 +33,7 @@
         Oeuvre cohérente d'une malade, ou cryptogramme ?
       </resumer>
     </film>
-    <film xml:id ="3">
+    <film id="film_3">
       <url>Pictures/f3.jpg</url>
       <nom>Insidious</nom>
       <genre>Horreur</genre>
@@ -48,7 +48,7 @@
         Josh va devoir lui aussi quitter son corps et s’aventurer dans l’au-delà ...
       </resumer>
     </film>
-    <film xml:id ="4">
+    <film id="film_4">
       <url>Pictures/f4.jpg</url>
       <nom>Ace ventura</nom>
       <genre>Comedie</genre>
@@ -61,8 +61,8 @@
       </resumer>
     </film>
   </films>
-  <series xml:id="series">
-    <serie xml:id="1">
+  <series>
+    <serie id="serie_1">
       <url>Pictures/f1.jpg</url>
       <nom>Walking Dead</nom>
       <genre>Horreur</genre>
@@ -80,8 +80,9 @@
         Casting : Avec Andrew Lincoln, Sarah Wayne Callies, Laurie Holden, Steven Yeun, Chandler Riggs, Jon Bernthal, Jeffrey DeMunn, Norman Reedus, Lauren Cohan et Danai Gurira.
 
       </resumer>
+
     </serie>
-    <serie xml:id="2">
+    <serie id="serie_2">
       <url>Pictures/f1.jpg</url>
       <nom>Game of Thrones</nom>
       <genre>Aventure</genre>
@@ -98,10 +99,10 @@
 
         Casting : Avec Andrew Lincoln, Sarah Wayne Callies, Laurie Holden, Steven Yeun, Chandler Riggs, Jon Bernthal,
         Jeffrey DeMunn, Norman Reedus, Lauren Cohan et Danai Gurira.
-
       </resumer>
+      
     </serie>
-    <serie xml:id ="3">
+    <serie id="serie_3">
       <url>Pictures/f1.jpg</url>
       <nom>Malcom</nom>
       <genre>Comedie</genre>
@@ -118,14 +119,11 @@
         Casting : Avec Andrew Lincoln, Sarah Wayne Callies, Laurie Holden, Steven Yeun, Chandler Riggs, Jon Bernthal, Jeffrey DeMunn, Norman Reedus, Lauren Cohan et Danai Gurira.
         Zone de message
 
-        Envoyer un message à @Lopez Nicolas
-
-        *gras* _italique_ ~barré~ `code` ```préformaté``` >citation
       </resumer>
     </serie>
-    <serie xml:id="4">
+    <serie id="serie_4">
       <url>Pictures/f1.jpg</url>
-      <nom>House of CArd</nom>
+      <nom>House of Card</nom>
       <genre>Drame</genre>
       <realisateur>D.Weiss</realisateur>
       <dateSortie>16/07/2014</dateSortie>
@@ -141,8 +139,8 @@
       </resumer>
     </serie>
   </series>
-  <documentaires xml:id="documentaires">
-    <documentaire xml:id="1">
+  <documentaires>
+    <documentaire id="documentaire_1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
       <genre>Documentaire</genre>
@@ -153,7 +151,7 @@
         va consommer durant 30 jours une énorme quantité de Marijuana.
       </resumer>
     </documentaire>
-    <documentaire xml:id="2">
+    <documentaire id="documentaire_2">
       <url>Pictures/f2.jpg</url>
       <nom>Le Peuple Migrateur</nom>
       <genre>Documentaire</genre>
@@ -166,7 +164,7 @@
         leurs escales saisonnières. Avec ce conte réel, il a également voulu montrer la précarité de leur vie et leur inaltérable beauté.
       </resumer>
     </documentaire>
-    <documentaire xml:id="3">
+    <documentaire id="documentaire_3">
       <url>Pictures/f1.jpg</url>
       <nom>Bowling for Columbine</nom>
       <genre>Documentaire</genre>
@@ -178,7 +176,7 @@
         alors été assassinés par deux de leurs camarades.
       </resumer>
     </documentaire>
-    <documentaire xml:id="4">
+    <documentaire id="documentaire_4">
       <url>Pictures/f1.jpg</url>
       <nom>Citizenfour</nom>
       <genre>Documentaire</genre>
@@ -192,8 +190,8 @@
       </resumer>
     </documentaire>
   </documentaires>
-  <mangas xml:id="mangas">
-    <manga xml:id ="1">
+  <mangas>
+    <manga id="manga_1">
       <url>Pictures/f1.jpg</url>
       <nom>Ghost in the Shell</nom>
       <genre>cyberpunk </genre>
@@ -204,7 +202,7 @@
         ,traque le plus grand cyber-terrosite du monde, le "Puppet Master"
       </resumer>
     </manga>
-    <manga xml:id="2">
+    <manga id="manga_2">
       <url>Pictures/f1.jpg</url>
       <nom>Perfect Blue</nom>
       <genre>thriller </genre>
@@ -216,7 +214,7 @@
         s'attirant la haine de ses anciens fans...
       </resumer>
     </manga>
-    <manga xml:id="3">
+    <manga id="manga_3">
       <url>Pictures/f1.jpg</url>
       <nom>Le voyage de Chihiro</nom>
       <genre>fantastique </genre>
@@ -229,7 +227,7 @@
         libérer ses parents changés en cochons.
       </resumer>
     </manga>
-    <manga xml:id ="4">
+    <manga id="manga_4">
       <url>Pictures/f1.jpg</url>
       <nom>Le tombeau des lucioles</nom>
       <genre> drame</genre>
@@ -241,8 +239,8 @@
       </resumer>
     </manga>
  </mangas>
-  <animes xml:id="animes">
-    <anime xml:id="1">
+  <animes>
+    <anime id="anime_1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
       <genre>Documentaire</genre>
@@ -253,7 +251,7 @@
         va consommer durant 30 jours une énorme quantité de Marijuana.
       </resumer>
     </anime>
-    <anime xml:id="2">
+    <anime id="anime_2">
       <url>Pictures/f2.jpg</url>
       <nom>Le Peuple Migrateur</nom>
       <genre>Documentaire</genre>
@@ -266,7 +264,7 @@
         leurs escales saisonnières. Avec ce conte réel, il a également voulu montrer la précarité de leur vie et leur inaltérable beauté.
       </resumer>
     </anime>
-    <anime xml:id="3">
+    <anime id="anime_3">
       <url>Pictures/f1.jpg</url>
       <nom>Bowling for Columbine</nom>
       <genre>Documentaire</genre>
@@ -278,8 +276,7 @@
         alors été assassinés par deux de leurs camarades.
       </resumer>
     </anime>
-
-    <anime xml:id="4">
+    <anime id="anime_4">
       <url>Pictures/f1.jpg</url>
       <nom>Citizenfour</nom>
       <genre>Documentaire</genre>
@@ -293,8 +290,8 @@
       </resumer>
     </anime>
   </animes>
-  <shows xml:id="shows">
-    <show xml:id="1">
+  <shows>
+    <show id="show_1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
       <genre>Documentaire</genre>
@@ -305,7 +302,7 @@
         va consommer durant 30 jours une énorme quantité de Marijuana.
       </resumer>
     </show>
-    <show xml:id="2">
+    <show id="show_2">
       <url>Pictures/f2.jpg</url>
       <nom>The fly circus</nom>
       <genre>Show</genre>
@@ -318,7 +315,7 @@
         leurs escales saisonnières. Avec ce conte réel, il a également voulu montrer la précarité de leur vie et leur inaltérable beauté.
       </resumer>
     </show>
-    <show xml:id="3">
+    <show id="show_3">
       <url>Pictures/f1.jpg</url>
       <nom>Les nuls la grosse emission</nom>
       <genre>Show</genre>
@@ -330,8 +327,7 @@
         alors été assassinés par deux de leurs camarades.
       </resumer>
     </show>
-
-    <show xml:id="4">
+    <show id="show_4">
       <url>Pictures/f1.jpg</url>
       <nom>The late show</nom>
       <genre>Show</genre>
@@ -345,8 +341,8 @@
       </resumer>
     </show>
   </shows>
-  <concerts xml:id="concerts">
-    <concert xml:id="1">
+  <concerts>
+    <concert id="concert_1">
       <url>Pictures/f1.jpg</url>
       <nom>Super High Me</nom>
       <genre>Concert</genre>
@@ -357,7 +353,7 @@
         va consommer durant 30 jours une énorme quantité de Marijuana.
       </resumer>
     </concert>
-    <concert xml:id="2">
+    <concert id="concert_2">
       <url>Pictures/f2.jpg</url>
       <nom>Le Peuple Migrateur</nom>
       <genre>Concert</genre>
@@ -370,7 +366,7 @@
         leurs escales saisonnières. Avec ce conte réel, il a également voulu montrer la précarité de leur vie et leur inaltérable beauté.
       </resumer>
     </concert>
-    <concert xml:id="3">
+    <concert id="concert_3">
       <url>Pictures/f1.jpg</url>
       <nom>A real dead one</nom>
       <genre>Concert</genre>
@@ -382,8 +378,7 @@
         alors été assassinés par deux de leurs camarades.
       </resumer>
     </concert>
-
-    <concert xml:id="4">
+    <concert id="concert_4">
       <url>Pictures/f1.jpg</url>
       <nom>A</nom>
       <genre>Concert</genre>
@@ -396,7 +391,7 @@
         un document historique unique et un portrait intime d’Edward Snowden.
       </resumer>
     </concert>
-    <concert xml:id="5">
+    <concert id="concert_5">
       <url>Pictures/f1.jpg</url>
       <nom>Citizenfour</nom>
       <genre>Concert</genre>
@@ -409,7 +404,7 @@
         un document historique unique et un portrait intime d’Edward Snowden.
       </resumer>
     </concert>
-    <concert xml:id="6">
+    <concert id="concert_6">
       <url>Pictures/f1.jpg</url>
       <nom>Citizenfour</nom>
       <genre>Concert</genre>

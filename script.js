@@ -1,3 +1,4 @@
+//SCRIPT PAGE ACCUEIL
 // Netflop version XMLHttpRequest (Objet javascript qui permet de récupérer un fichier JSON ou XML : il envoie une requête au serveur pour récupérer des infos)
 
 function chargerNetflopXml() {
@@ -51,8 +52,7 @@ function chargerNetflopXml() {
     xhr.send();
 }
 
-
-
+// =========================================================================================================
 /**
  * Fonction pour afficher les FILMS depuis le document XML
  * @param {Document} xmlDoc Document XML parsé par DOMParser
@@ -133,7 +133,6 @@ function chargerNetflopXml() {
         container.appendChild(documentaireCard);
     }
  }
-
  
  /**
  * Fonction pour afficher les MANGAS depuis le document XML
@@ -188,7 +187,7 @@ function chargerNetflopXml() {
         container.appendChild(animeCard);
     }
  }
-
+ 
   /**
  * Fonction pour afficher les SHOWS depuis le document XML
  * @param {Document} xmlDoc Document XML parsé par DOMParser
@@ -242,8 +241,8 @@ function chargerNetflopXml() {
         container.appendChild(concertCard);
     }
  }
+ 
 //========================================================================================================
-
  /**
   * Fonction générique pour créer une carte d'affichage à partir d'un élément XML
   * @param {element} item - element XML (film, serie, etc)
@@ -251,8 +250,8 @@ function chargerNetflopXml() {
   */
 
  function creerCarteXML(item){
-    // creer le conteneur de la carte
-    // creer une div pour la carte
+    // créer le conteneur de la carte
+    // créer une div pour la carte
     let card = document.createElement("div");
     card.className = "card"; // = card.setAttribute(className,"card");
 
@@ -339,7 +338,26 @@ function chargerNetflopXml() {
     // ajoute l'image et les informations à la carte
     card.appendChild(img);
     card.appendChild(infoDiv);
+
+    // Rendre l'élément card cliquable
     
+        //Récupérer l'id de l'élément depuis l'attribut "id"
+        let itemId = item.getAttribute("id");
+
+        //Récupérer le nom de la balise XML pour déterminer la catégorie
+        let itemType = item.tagName.toLowerCase();
+
+        // Vérifier que l' id existe avant de rendre la carte cliquable
+        if(itemId && itemType) {
+            //ajouter l'évènement au click
+            card.onclick = function() {
+                //rédiger vers la page descriptive avec l'id et le type dynamique
+                window.location.href = `ficheDescriptive.html?id=${itemId}&type=${itemType}`;
+            };
+
+        } else {
+            console.error("Le type ou l'id n'a pas été trouvé.");
+        }
     return card;
 
  } 
