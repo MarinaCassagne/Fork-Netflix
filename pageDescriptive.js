@@ -29,40 +29,41 @@ function chargerItemDetail() {
 
   let xhr = new XMLHttpRequest(); //xhr = XMLHttpRequest
 
-  xhr.open("GET", "netflop.xml", true);
+  xhr.open("GET", "netflop.json", true);
 
   //Définir le gestionnaire d'évenement pour le chargement
   xhr.onload = function () {
     //vérifier si la requête réussi
     //status 200 = OK (succès)
     if (xhr.status === 200) {
-      //Parser le XML avec DOMPARSER
-      //on crée une instance de DOMParser
-      let parser = new DOMParser();
-      //console.log(parser);
-      //Parse le text xml recu et convertir en Document XML
-      //xhr.responseText = le contenu du fichier XML en texte
-      //"text/xml" = typeMIME pour indiquer que c'est du XML
-      let xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
+      //Parser le JSON avec la méthode parse
+        let data = JSON.parse(xhr.responseText);
+        console.log(data); 
+      //La méthode .parse parse le text json recu et le converti en objet JSON
+      //xhr.responseText renvoit le contenu de l'objet JSON
 
       //Afficher les différentes catégories
       //chercher template par type (xmlDoc, itemId, itemType)
       
-      let item = chercherItemPartype(xmlDoc,itemId,itemType);
-      afficherDetailItem(item,itemType);
+      let item = chercherItemPartype(data,itemId,itemType);
+      console.log(`Affichage item ${item}`);
+      
+      
+      afficherDetailItem(item);
 
       // afficherDetailItem(item, itemType);
       console.log(item);
-      console.log(xmlDoc);
+      console.log(data);
     
 
     } else {
 
-      console.error("erreur lors du chargement du fichier XML");
+      console.error("erreur de chargement du JSON");
       console.error("status:", xhr.status);
       console.error("message:", xhr.statusText);
     }
   };
+  //Envoyer la requête
    xhr.send();
 }
 
@@ -71,52 +72,71 @@ chargerItemDetail();
 
 //=====================================================================================================
 
-function chercherItemPartype(xmlDoc, itemId, itemType) {
-  //on va rechercher l'élément dans notre xml par son type (films, séries, etc...)
-  let items = xmlDoc.getElementsByTagName(itemType);
+function chercherItemPartype(data, itemId, itemType) {
   //Parcours la liste des items
-  for (i = 0; i < items.length; i++) {
-    let item = items[i];
-    console.log(item);
-    
-    //on vérifie si l'item a un attribut id
-    if (item.hasAttribute("id") && item.getAttribute("id") === itemId) {
-      return item;
-    } 
-    // else {
-    //   return null;
-    // }
+ 
+    console.log(data.netflop);
+
+  // Arriver au bon noeud pour boucler dessus
+  // Remplacer l'itemType (exemple:film) par la catégorie() la tableau de correspondance
+let categoryMap = {
+  "film": { categorie: "films", tableau: "data.netflop.films.film" },
+  "serie": { categorie: "séries", tableau: "data.netflop.series.serie" },
+  "documentaire": { categorie: "documentaires", tableau: "data.netflop.documentaires.documentaire" },
+  "manga": { categorie: "mangas", tableau: "data.netflop.mangas.manga" },
+  "anime": { categorie: "animés", tableau: "data.netflop.animes.anime" },
+  "show": { categorie: "shows", tableau: "data.netflop.shows.show" },
+  "concert": { categorie: "concerts", tableau: "data.netflop.concerts.concert" }
+};
+
+ 
+  let config = categoryMap[itemType];
+  if(!config) {
+    return null;
   }
-}
+  if (config.tableau && Array.isArray(config.tableau)) {
+    for(let i = 0; i < config.tableau.length;i++) {
+      if (config.tableau[i].id === itemId) {
+        return config.tableau[i];
+      }
+
+      }
+    }
+    console.log(config.tableau[i]);
+    
+  }
+
 
 //=====================================================================================================
 
 // Afficher le descriptif de l'itenm cliqué (films, séries, etc...)
-function afficherDetailItem(item, itemType) {
+function afficherDetailItem(item) {
  // créer le conteneur de la carte
     // créer une div pour la carte
     let card = document.createElement("div");
     card.className = "card"; // = card.setAttribute(className,"card");
 
-    // extraire du XML
+    // extraire du JSON
+console.log(item);
 
-    // récupérer le nom depuis la balise <nom>
-    let nom = item.getElementsByTagName("nom")[0].textContent;
+    // récupérer le nom depuis la propriété nom: de mon objet item
+    let nom = item.nom;
+    
 
-    // récupérer le genre depuis la balise <genre>
-    let genre= item.getElementsByTagName("genre")[0].textContent;
+    // récupérer le genre depuis la propriété genre: de mon objet item
+    let genre= item.genre;
 
-    // récupérer le réalisateur depuis la balise <realisateur>
-    let realisateur = item.getElementsByTagName("realisateur")[0].textContent;
+    // récupérer le réalisateur depuis la propriété realisateur: de mon objet item
+    let realisateur = item.realisateur;
 
-    // récupérer la date de sortie depuis la balise <dateSortie>
-    let dateSortie = item.getElementsByTagName("dateSortie")[0].textContent;
+    // récupérer la date de sortie depuis la propriété dateSortie: de mon objet item
+    let dateSortie = item.dateSortie;
 
-    // récuperer le resumé depuis la balise <resumer>
+    // récuperer le resumé depuis la propriété resumer: de mon objet item
     //trim( )- supprimer les espaces au début et à la fin
-    let resumer = item.getElementsByTagName("resumer")[0].textContent.trim()
+    let resumer = item.resumer;
 
-    // recuperer l'url de l'image depuis la balise <url>
+     // recuperer l'url de l'image epuis la propriété url: de mon objet item
     let url = item.getElementsByTagName("url")[0].textContent;
 
     // créer un element img pour afficher l'image
