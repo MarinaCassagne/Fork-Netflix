@@ -27,7 +27,7 @@ function chargerItemDetail() {
   console.log(itemType);
   
 
-  let xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest(); //xhr = XMLHttpRequest
 
   xhr.open("GET", "netflop.xml", true);
 

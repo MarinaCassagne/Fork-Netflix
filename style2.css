@@ -142,7 +142,7 @@ main .card p {
 }
 
 /* 
-PAGE JAQUETTE
+PAGE Descriptive
 */
 
 #LogoNetflixPetit {
@@ -154,33 +154,73 @@ iframe {
 }
 
 #films {
-    display: flex;
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "h2 h2 h2 h2"
+    "ca ca ca ca"
+    ;
 }
 
-#series {
-    display: flex;
+#films h2 {
+    grid-area: "h2";
 }
 
-#documentaires {
-    display: flex;
+#films .card {
+    grid-area: "ca";
 }
 
-#mangas {
-    display: flex;
+#series h2 {
+    grid-area: "h2";
 }
 
-#animes {
-    display: flex;
+#series .card {
+    grid-area: "ca";
 }
 
 
-#shows {
-    display: flex;
+#documentaires h2 {
+    grid-area: "h2";
 }
 
-#concerts {
-    display: flex;
+#documentaires .card {
+    grid-area: "ca";
 }
+
+#mangas h2 {
+   grid-area: "h2";
+}
+
+#mangas .card {
+    grid-area: "ca";
+}
+
+#animes h2 {
+     grid-area: "h2";
+}
+
+#animes .card {
+     grid-area: "ca";
+}
+
+
+#shows h2 {
+    grid-area: "h2";
+}
+
+#shows .card {
+    grid-area: "ca";
+}
+
+
+#concerts h2 {
+    grid-area: "h2";
+}
+#concerts .ca {
+    grid-area: "ca";
+}
+
 
 .Sabonner {
   height: 15%;
