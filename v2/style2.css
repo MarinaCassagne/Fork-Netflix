@@ -1,0 +1,236 @@
+/* 
+PAGE ACCUEIL
+*/
+
+html {
+  color: white;
+  background-color: rgb(24, 24, 24);
+  font-family: "Segoe UI", sans-serif;
+  padding: 2%;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+}
+
+img {
+  height: 400px;
+  width: 300px;
+  border-radius: 5%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Bebas Neue";
+  letter-spacing: 0.2rem;
+  font-size: 300%;
+  text-align: center;
+}
+
+#LogoNetflixGrand {
+  height: 10%;
+  width: 300px;
+  vertical-align: middle;
+}
+
+h2 {
+  font-family: "Bebas Neue";
+  letter-spacing: 0.2rem;
+  font-size: 200%;
+}
+
+h3 {
+  margin: 0;
+  font-size: 150%;
+}
+
+main h3 {
+  height: 30px;
+}
+
+#LogoNetflixPetit {
+  height: 60px;
+  width: auto;
+  border-radius: 15px;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  letter-spacing: 0.2rem;
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+}
+
+nav ul li a {
+  color: grey;
+  font-weight: bold;
+}
+
+nav ul li {
+  margin: 1%;
+  padding: 0.5% 1%;
+}
+
+li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 150%;
+}
+
+header div {
+  display: flex;
+  justify-content: space-around;
+  justify-items: first baseline;
+  margin: 1% auto;
+  text-align: left;
+}
+
+header article {
+  margin: 0 2%;
+  padding: 1%;
+  height: 300px;
+  width: 30%;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom right, #4b1c5d, #3c216e, #120c1f);
+  border-radius: 5%;
+}
+
+header article ul {
+  height: 30%;
+  padding: 0;
+}
+
+header article li {
+  margin: 1%;
+}
+
+#sectionOffres {
+  margin-bottom: 5%;
+}
+
+svg {
+  vertical-align: middle;
+  margin-right: 5%;
+}
+
+header article p {
+  justify-content: right;
+}
+
+main .card {
+  margin: 1%;
+  width: 60%;
+  padding: 1%;
+}
+
+main .card p {
+  text-align: justify;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+/* 
+PAGE Descriptive
+*/
+
+#LogoNetflixPetit {
+  height: 60px;
+}
+
+iframe {
+  border-radius: 15px;
+}
+
+#films {
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "h2 h2 h2 h2"
+    "ca ca ca ca"
+    ;
+}
+
+#films h2 {
+    grid-area: "h2";
+}
+
+#films .card {
+    grid-area: "ca";
+}
+
+#series h2 {
+    grid-area: "h2";
+}
+
+#series .card {
+    grid-area: "ca";
+}
+
+
+#documentaires h2 {
+    grid-area: "h2";
+}
+
+#documentaires .card {
+    grid-area: "ca";
+}
+
+#mangas h2 {
+   grid-area: "h2";
+}
+
+#mangas .card {
+    grid-area: "ca";
+}
+
+#animes h2 {
+     grid-area: "h2";
+}
+
+#animes .card {
+     grid-area: "ca";
+}
+
+
+#shows h2 {
+    grid-area: "h2";
+}
+
+#shows .card {
+    grid-area: "ca";
+}
+
+
+#concerts h2 {
+    grid-area: "h2";
+}
+#concerts .ca {
+    grid-area: "ca";
+}
+
+
+.Sabonner {
+  height: 15%;
+  width: 40%;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(255, 0, 0);
+}
+
+.Sabonner:hover {
+  background-color: rgba(255, 0, 0, 0.492);
+}
