@@ -48,13 +48,11 @@ function chargerItemDetail() {
       let item = chercherItemPartype(data,itemId,itemType);
       console.log(`Affichage item ${item}`);
       
-      
-      afficherDetailItem(item);
-
       // afficherDetailItem(item, itemType);
       console.log(item);
       console.log(data);
-    
+        
+      afficherDetailItem(item);
 
     } else {
 
@@ -79,37 +77,41 @@ function chercherItemPartype(data, itemId, itemType) {
 
   // Arriver au bon noeud pour boucler dessus
   // Remplacer l'itemType (exemple:film) par la catégorie() la tableau de correspondance
-let categoryMap = {
-  "film": { categorie: "films", tableau: "data.netflop.films.film" },
-  "serie": { categorie: "séries", tableau: "data.netflop.series.serie" },
-  "documentaire": { categorie: "documentaires", tableau: "data.netflop.documentaires.documentaire" },
-  "manga": { categorie: "mangas", tableau: "data.netflop.mangas.manga" },
-  "anime": { categorie: "animés", tableau: "data.netflop.animes.anime" },
-  "show": { categorie: "shows", tableau: "data.netflop.shows.show" },
-  "concert": { categorie: "concerts", tableau: "data.netflop.concerts.concert" }
-};
+  let categoryMap = {
+    film: { categorie: "films", tableau: data.netflop.films.film },
+    serie: { categorie: "séries", tableau: data.netflop.series.serie },
+    documentaire: { categorie: "documentaires", tableau: data.netflop.documentaires.documentaire },
+    manga: { categorie: "mangas", tableau: data.netflop.mangas.manga },
+    anime: { categorie: "animés", tableau: data.netflop.animes.anime },
+    show: { categorie: "shows", tableau: data.netflop.shows.show },
+    concert: { categorie: "concerts", tableau: data.netflop.concerts.concert }
+  };
 
- 
-  let config = categoryMap[itemType];
-  if(!config) {
-    return null;
-  }
-  if (config.tableau && Array.isArray(config.tableau)) {
-    for(let i = 0; i < config.tableau.length;i++) {
-      if (config.tableau[i].id === itemId) {
-        return config.tableau[i];
-      }
-
-      }
-    }
-    console.log(config.tableau[i]);
+  
+    let config = categoryMap[itemType];
+    console.log(config);
     
-  }
+    if(!config) {
+      return null;
+    }
+    if (config.tableau && Array.isArray(config.tableau)) 
+      {
+        for(let i = 0; i < config.tableau.length; i++) 
+          {
+            if (config.tableau[i].id === itemId) 
+            {
+              return config.tableau[i];
+            }
+
+          }
+      }
+      console.log(config.tableau[i]);
+    }
 
 
 //=====================================================================================================
 
-// Afficher le descriptif de l'itenm cliqué (films, séries, etc...)
+// Afficher le descriptif de l'item cliqué (films, séries, etc...)
 function afficherDetailItem(item) {
  // créer le conteneur de la carte
     // créer une div pour la carte
@@ -117,14 +119,13 @@ function afficherDetailItem(item) {
     card.className = "card"; // = card.setAttribute(className,"card");
 
     // extraire du JSON
-console.log(item);
+    console.log(item);
 
     // récupérer le nom depuis la propriété nom: de mon objet item
     let nom = item.nom;
     
-
     // récupérer le genre depuis la propriété genre: de mon objet item
-    let genre= item.genre;
+    let genre = item.genre;
 
     // récupérer le réalisateur depuis la propriété realisateur: de mon objet item
     let realisateur = item.realisateur;
@@ -137,7 +138,7 @@ console.log(item);
     let resumer = item.resumer;
 
      // recuperer l'url de l'image epuis la propriété url: de mon objet item
-    let url = item.getElementsByTagName("url")[0].textContent;
+    let url = item.url;
 
     // créer un element img pour afficher l'image
     let img = document.createElement("img");
@@ -202,7 +203,7 @@ console.log(item);
     card.appendChild(img);
     card.appendChild(infoDiv);
 
-    let monMain = document.getElementById("tata");
+    let monMain = document.getElementById("item-detail");
     monMain.appendChild(card);
 
 }

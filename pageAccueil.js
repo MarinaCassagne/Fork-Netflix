@@ -24,11 +24,12 @@ function chargerNetflopJSON() {
                        
             //Afficher les différentes catégories
             afficherFilmsJSON(data.netflop.films.film);
-            afficherSeriesJSON(data.netflop.mangas.manga);
-            afficherDocumentairesJSON(data.netflop.series.serie);
-            afficherMangasJSON(data.netflop.shows.show);
-            afficherMangasJSON(data.netflop.concerts.concert);
-            afficherMangasJSON(data.netflop.documentaires.documentaire);
+            afficherMangasJSON(data.netflop.mangas.manga);
+            afficherSeriesJSON(data.netflop.series.serie);
+            afficherShowsJSON(data.netflop.shows.show);
+            afficherConcertsJSON(data.netflop.concerts.concert);
+            afficherDocumentairesJSON(data.netflop.documentaires.documentaire);
+            afficherAnimesJSON(data.netflop.animes.anime);
     
         }else{
             console.error("erreur de chargement du JSON");
@@ -87,7 +88,7 @@ function chargerNetflopJSON() {
     //Parcourir tous les series ( attention series est un HTMLCollection, du coup pas un vrai tableau!)
     for (let i = 0; i < series.length;i++) {
         console.log(series[i]);
-        let serieCard = creerCarteXML(series[i],"serie");
+        let serieCard = creerCarteJSON(series[i],"serie");
         container.appendChild(serieCard);
     }
  }
@@ -97,7 +98,7 @@ function chargerNetflopJSON() {
  * @param {Document} documentaires documentaires = data.netflop.documentaires; dans le document JSON 
  */
 
- function afficherDocumentairesXML(documentaires) {
+ function afficherDocumentairesJSON(documentaires) {
     //Récupérer le conteneur HTML où afficher les documentaires
     let container = document.getElementById("documentaires");
 
@@ -328,7 +329,7 @@ function chargerNetflopJSON() {
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Le DOM est chargé,lancement de netflop avec DOMParser...");
 
-    //executer la function chargerNetflopXML
+    //executer la fonction chargerNetflopJSON
     chargerNetflopJSON();
 })
 

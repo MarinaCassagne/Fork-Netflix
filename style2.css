@@ -21,17 +21,26 @@ img {
   margin: 0 auto;
 }
 
-h1 {
-  font-family: "Bebas Neue";
-  letter-spacing: 0.2rem;
-  font-size: 300%;
-  text-align: center;
+#LogoNetflixPetit {
+  height: 100%;
+  width: auto;
+  padding: 0;
+  margin: 0 20% 0 0;
+  border-radius: 15px;
+  object-position: 50% 50%;
 }
 
 #LogoNetflixGrand {
   height: 10%;
   width: 300px;
   vertical-align: middle;
+}
+
+h1 {
+  font-family: "Bebas Neue";
+  letter-spacing: 0.2rem;
+  font-size: 300%;
+  text-align: center;
 }
 
 h2 {
@@ -49,26 +58,23 @@ main h3 {
   height: 30px;
 }
 
-#LogoNetflixPetit {
-  height: 60px;
-  width: auto;
-  border-radius: 15px;
+nav {
+display: flex;
 }
 
 nav ul {
   font-family: "Bebas Neue";
   letter-spacing: 0.2rem;
-  margin: 0 auto;
   padding: 0;
-  width: 50%;
+  width: 80%;
   display: flex;
-  justify-content: space-around;
   border-radius: 15px;
 }
 
 nav ul li a {
   color: grey;
   font-weight: bold;
+
 }
 
 nav ul li {
@@ -142,7 +148,7 @@ main .card p {
 }
 
 /* 
-PAGE Descriptive
+PAGE DESCRIPTIVE
 */
 
 #LogoNetflixPetit {
