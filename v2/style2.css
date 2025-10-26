@@ -50,9 +50,23 @@ main h3 {
 }
 
 #LogoNetflixPetit {
-  height: 60px;
-  width: auto;
+  height: 2.5%;
+  width: 2.5%;
   border-radius: 15px;
+  margin: 0 15% 0 0;
+}
+
+#NavigationLogoPetit {
+  margin: 0;
+  height: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+nav {
+width: 70%;
 }
 
 nav ul {
@@ -60,10 +74,14 @@ nav ul {
   letter-spacing: 0.2rem;
   margin: 0 auto;
   padding: 0;
-  width: 50%;
   display: flex;
   justify-content: space-around;
   border-radius: 15px;
+}
+
+nav ul li {
+  margin: 1%;
+  padding: 0.5% 1%;
 }
 
 nav ul li a {
@@ -71,10 +89,7 @@ nav ul li a {
   font-weight: bold;
 }
 
-nav ul li {
-  margin: 1%;
-  padding: 0.5% 1%;
-}
+
 
 li {
   list-style: none;
@@ -145,82 +160,75 @@ main .card p {
 PAGE Descriptive
 */
 
-#LogoNetflixPetit {
-  height: 60px;
-}
+
 
 iframe {
   border-radius: 15px;
 }
 
 #films {
-    display: grid;
-    grid-template-rows: 2fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
+  display: grid;
+  grid-template-rows: 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
     "h2 h2 h2 h2"
-    "ca ca ca ca"
-    ;
+    "ca ca ca ca";
 }
 
 #films h2 {
-    grid-area: "h2";
+  grid-area: "h2";
 }
 
 #films .card {
-    grid-area: "ca";
+  grid-area: "ca";
 }
 
 #series h2 {
-    grid-area: "h2";
+  grid-area: "h2";
 }
 
 #series .card {
-    grid-area: "ca";
+  grid-area: "ca";
 }
 
-
 #documentaires h2 {
-    grid-area: "h2";
+  grid-area: "h2";
 }
 
 #documentaires .card {
-    grid-area: "ca";
+  grid-area: "ca";
 }
 
 #mangas h2 {
-   grid-area: "h2";
+  grid-area: "h2";
 }
 
 #mangas .card {
-    grid-area: "ca";
+  grid-area: "ca";
 }
 
 #animes h2 {
-     grid-area: "h2";
+  grid-area: "h2";
 }
 
 #animes .card {
-     grid-area: "ca";
+  grid-area: "ca";
 }
 
-
 #shows h2 {
-    grid-area: "h2";
+  grid-area: "h2";
 }
 
 #shows .card {
-    grid-area: "ca";
+  grid-area: "ca";
 }
-
 
 #concerts h2 {
-    grid-area: "h2";
+  grid-area: "h2";
 }
 #concerts .ca {
-    grid-area: "ca";
+  grid-area: "ca";
 }
-
 
 .Sabonner {
   height: 15%;
